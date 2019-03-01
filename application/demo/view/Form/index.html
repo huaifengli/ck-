@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<style>
+.layui-laypage-curr em {margin-right: 10px;font-style: normal;}
+a{margin-right: 10px;}
+</style>
+<body>
+	<h4>用户信息管理</h4>
+	<a href="{:url('demo/Form/add')}">增加</a>
+	<table border="1">
+	<!-- 表头 -->
+		<tr>
+			<td>商品名称</td>
+			<td>商品描述</td>
+			<td>商品货号</td>
+			<td>图片地址</td>
+			<td>富文本</td>
+			<th>操作</th>
+		</tr>
+		{volist name="info" id="vo"}
+			<tr>
+				<td>{$vo.goodsname}</td>
+				<td>{$vo.goodsintro}</td>
+				<td>{$vo.goodsnumber}</td>
+				<td>{$vo.pic}</td>
+				<td>{$vo.content}</td>
+			</tr>
+		{/volist}
+	</table>
+	
+	
+    
+</body>
+</html>
